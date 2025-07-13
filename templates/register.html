@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{% static 'style/index.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+</head>
+<body>
+    
+    <div class="registration">
+        <div class="intro"><h1>Sign Up</h1></div>
+        <form action="{% url 'register' %}" method="post">
+            {% csrf_token %}
+            <div class="firstName">
+                <input type="text" class="input" id="F_name" placeholder="First Name" name="firstname"required>
+            </div>
+            <div class="lastName">
+                <input type="text" class="input" id="L_name" placeholder="Last Name" name="lastname"required>
+            </div>
+            <div class="userName">
+                <input type="text" class="input" id="user_name" placeholder="User Name" name="username"required>
+            </div>
+            <div class="email">
+                <input type="email" class="input" id="email" placeholder="Enter Email" name="email"required>
+            </div>
+            <div class="password1">
+               <input type="password" class="input" id="password" placeholder="Enter Password"name="password1"required> 
+            </div>
+            <div class="password2">
+                <input type="password" class="input" id="password2" placeholder="Enter Password Again" name="password2"required>
+            </div>
+
+            <button type="submit">Submit</button>
+
+            <p class="user">Have an account? <a href="{% url 'login' %}">Login</a></p>
+        </form>
+        
+        
+    </div>
+    <p class="credit">Photo by <a target="_blank" href="https://www.shopify.com/stock-photos/@matthew_henry?utm_campaign=photo_credit&amp;utm_content=Picture+of+Working+At+Night+-+Free+Stock+Photo&amp;utm_medium=referral&amp;utm_source=credit">Matthew Henry</a> from <a target="_parent" href="https://www.shopify.com/stock-photos/computer?utm_campaign=photo_credit&amp;utm_content=Picture+of+Working+At+Night+-+Free+Stock+Photo&amp;utm_medium=referral&amp;utm_source=credit">Burst</a></p>
+</body>
+</html>

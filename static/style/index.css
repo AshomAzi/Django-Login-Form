@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    font-weight: 500;
+}
+
+
+
+/*  font for my h1 style
+
+.spectral-extralight {
+  font-family: "Spectral", serif;
+  font-weight: 200;
+  font-style: normal;
+} */
+
+/*  font for my texts
+
+.nunito-<uniquifier> {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+
+
+body {
+    padding-top: 50px;
+    height:100vh;
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+h1 {
+  font-family: "Spectral", serif;
+  font-weight: 500;
+  color: whitesmoke;
+}
+.registration {
+    height: 90%;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    padding-top: 40px;
+    border-radius: 20px;
+    width: 45%;
+    height: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    opacity: .6;
+}
+
+form .input {
+    background: none;
+    width: 300px;
+    height: 30px;
+    padding: 5px 10px;
+    border: none;
+    border-bottom: 2px solid;
+    outline: none;
+    background-color: none;
+}
+
+form .input:focus {
+    width: 350px;
+}
+
+form .input::placeholder{
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+button {
+    font-family: "Nunito", sans-serif;
+    font-weight: 900;
+    color: #000;
+    border: 1px solid;
+    outline: none;
+    padding: 7px 15px;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+    transition:400ms;
+}
+
+.login a {
+    color: #0000ff;
+}
+
+.login a:hover{
+    text-decoration: underline;
+}
+
+.credit {
+    color:  #000000;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.credit a {
+    color: #eed1d1;
+}
+
+.credit a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+@media (min-width: 0px) and (max-width: 480px) {
+
+    body {
+        background-image: url(../img/background-mobile.jpg);
+    }
+
+    .registration {
+        height: 85%;
+    }
+
+    form {margin-top: -50px;
+        padding: 25px 0;
+        border-radius: 20px;
+        width: 100%;
+        height: 90%;
+    } 
+
+}
+
+@media (min-width: 481px) and (max-width: 760px)   {
+
+    body {
+        background-image: url(../img/background-mobile.jpg);
+    }
+
+    form {
+        margin-top: -50px;
+        padding: 25px 0;
+        border-radius: 20px;
+        width: 100%;
+        height: 90%;
+    }
+
+    form .input {
+        width: 400px;
+        height: 30px;
+        padding: 5px 10px;
+    }
+    
+    .registration {
+        height: 85%;
+    }
+
+}
+
+@media (min-width: 761px) and (max-width: 1020px) {
+
+    body {
+        background-image: url(../img/background-large.jpg);
+    }
+
+    form {
+        padding: 25px 0;
+        border-radius: 20px;
+        width: 80%;
+        height: 50%;
+    }
+
+    form .input {
+        width: 500px;
+        height: 30px;
+        padding: 5px 10px;
+    }
+
+    .registration {
+        height: 85%;
+    }
+}
+
+@media (min-width: 1021px) {
+
+    body {
+        background-image: url(../img/background-large.jpg);
+    }
+    
+    form {
+        width: 50%;
+        height: 100%;
+    }
+
+    form .input {
+        width: 500px;
+        height: 30px;
+        padding: 5px 10px;
+    }
+
+    form .input:focus {
+        width: 600px;
+    }
+
+    .registration {
+        height: 85%;
+    }
+}
