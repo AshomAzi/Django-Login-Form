@@ -18,8 +18,10 @@
 <body>
 
   <div class="intro">
-      <h1>Welcome User To Our Home Page</h1>
+      <h1>Welcome {{user.firstname}} To Our Home Page</h1>
   </div>
+
+  <a href="{% url 'logout' %}">Logout</a>
 
   <div class="booble">
     <div class="Strich1">
