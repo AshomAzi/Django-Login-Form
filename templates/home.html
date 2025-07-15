@@ -13,15 +13,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static '/img/favicon.ico' %}" type="image/x-icon">
 </head>
 <body>
 
   <div class="intro">
-      <h1>Welcome {{user.firstname}} To Our Home Page</h1>
+    <h1>Welcome To The Page, {{user.username}}</h1>
   </div>
 
-  <a href="{% url 'logout' %}">Logout</a>
+  <div class="logout">
+    <a href="{% url 'logout' %}">Logout</a>
+  </div>
 
   <div class="booble">
     <div class="Strich1">
