@@ -1,0 +1,2 @@
+1. In this project, I learned the importance of collecting static files.
+2. Learn how to work ono authentication, user login and logout.
